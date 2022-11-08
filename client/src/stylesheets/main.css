@@ -1,0 +1,73 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  direction: rtl;
+  font-family: "IRANSans_light";
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 968px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@font-face {
+  font-family: IRANSans_light;
+  src: url("../assets/fonts/ttf/IRANSansWeb(FaNum)_Light.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: IRANSans_bold;
+  src: url("../assets/fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: IRANSans_medium;
+  src: url("../assets/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: IRANSans_normal;
+  src: url("../assets/fonts/ttf/IRANSansWeb(FaNum).ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: IRANSans_ultralight;
+  src: url("../assets/fonts/ttf/IRANSansWeb(FaNum)_UltraLight.ttf");
+  font-style: normal;
+}/*# sourceMappingURL=main.css.map */
