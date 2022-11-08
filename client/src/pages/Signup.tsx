@@ -1,9 +1,33 @@
+import TwetterLogo from '../assets/images/twetter.png'
 
 const Signup = () => {
   return (
-    <div style={{color:'red'}}>
-       ورود 
-    </div>
+    <>
+       <div className="login container">
+        {/* Right Side */}
+        <div className="login__right">
+          <h3 className="login__right-h3">ورود</h3>
+          <div className="login__inputs">
+            <input placeholder="نام کاربری" type='text' className="login__input" />
+            <input placeholder="رمز عبور" type='password' className="login__input" />
+            <div className="login__submits">
+              <button className="login__submit">ورود</button>
+              <a href='/' className="login__notaccount">قبلا ثبت نام نکرده ام!</a>
+            </div>
+          </div>
+        </div>
+        {/* Left Side  */}
+        <div className="login__left">
+          <div className="login__twetter">
+            <img src={TwetterLogo} alt='tweeter' />
+          </div>
+          <div className="login__brands">
+            <h1 className="login__brands-brand">ZKC MEDIA</h1>
+            <h5 className="login__brands-slogan">ایده ها را در سراسر جهان کشف کنید</h5>
+          </div>
+        </div>
+       </div>
+    </>
   )
 }
 

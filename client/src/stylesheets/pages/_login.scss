@@ -1,0 +1,129 @@
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        border-radius: 1rem ;
+        width: 30rem;
+        padding: 1rem;
+        box-shadow: 1px 2px 17px 0px rgba(222,222,222,0.75);
+        @media only screen and (max-width: 576px) {
+            margin: 2rem 0;
+        }
+        &-h3 {
+            color: $black;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+    &__input {
+        margin: 1rem 0;
+        padding: 1rem 2rem;
+        border: none;
+        background-color: $gray_light;
+        border-radius: .5rem;
+        font-family: $font_light_sans;
+        outline: 0;
+        font-size: 1.2rem;
+    }
+    &__submits {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    &__submit {
+        padding: .5rem 2rem;
+        font-family: $font_light_sans;
+        outline: 0;
+        border: 1px solid $orange_dark;
+        border-radius: 0.5rem;
+        color: $white;
+        cursor: pointer;
+        transition: all .5s ease-in;
+        background: linear-gradient($orange_dark, $orange_light);
+        &:hover {
+            background: $white;
+            border: 1px solid $orange_dark;
+            color: $black;
+        }
+    }
+    &__notaccount {
+        color: $blue_dark;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0 8rem;
+        @media only screen and (max-width: 576px) {
+            .login__twetter {
+                visibility: hidden;
+                display: none;
+            }
+        }
+        
+    }
+    &__brands {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &-brand {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient($orange_dark, $orange_light);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &-slogan {
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: 992px) {
+            .login__brands-brand {
+                font-size: 2.5rem;
+            }
+            .login__brands-slogan {
+                font-size: 1.5rem;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .login__brands-brand {
+                font-size: 2rem;
+            }
+            .login__brands-slogan {
+                font-size: 1.2rem;
+            }
+        }
+        @media only screen and (max-width: 576px) {
+            .login__brands-brand {
+                font-size: 1.5rem;
+            }
+            .login__brands-slogan {
+                font-size: 0.7rem;
+            }
+        }
+    }
+
+
+}
