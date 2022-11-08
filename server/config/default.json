@@ -1,0 +1,8 @@
+{
+    "name": "chat app",
+    "db_connection_string": {
+        "address": "mongodb://127.0.0.1:27017/chat"
+    },
+    "secret_key": "dkashfkjdhsfkjhdsjhfhdksjhfk"
+    
+}
