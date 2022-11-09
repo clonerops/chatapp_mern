@@ -1,0 +1,17 @@
+.button {
+    padding: .5rem 2rem;
+    font-family: $font_light_sans;
+    outline: 0;
+    border: 1px solid $orange_dark;
+    border-radius: 0.5rem;
+    color: $white;
+    cursor: pointer;
+    transition: all .5s ease-in;
+    background: linear-gradient($orange_dark, $orange_light);
+
+    &:hover {
+        background: $white;
+        border: 1px solid $orange_dark;
+        color: $black;
+    }
+}

@@ -1,35 +1,51 @@
+import { useState } from 'react'
 import TwetterLogo from '../assets/images/twetter.png'
+import Button from '../components/Button'
 import Input from '../components/Input'
 
 const Signup = () => {
+
+  const [mode, setMode] = useState<boolean>(false)
+
+  const changeMode = () => setMode(prev => !prev)
+
   return (
     <>
-       <div className="login container">
+      <div className="auth container">
         {/* Right Side */}
-        <div className="login__right">
-          <h3 className="login__right-h3">ورود</h3>
-          <div className="login__inputs">
-            <Input placeholder='نام کاربری' type='text' />
-            <Input placeholder='رمز عبور' type='password' />
-            {/* <input placeholder="نام کاربری" type='text' className="login__input" /> */}
-            {/* <input placeholder="رمز عبور" type='password' className="login__input" /> */}
-            <div className="login__submits">
-              <button className="login__submit">ورود</button>
-              <a href='/' className="login__notaccount">قبلا ثبت نام نکرده ام!</a>
+        <div className="auth__right">
+          <h3 className="auth__right-h3">{mode ? 'ثبت نام' : 'ورود'}</h3>
+          <div className="auth__inputs">
+            {mode ? (
+              <>
+                <Input placeholder='نام' type='text' />
+                <Input placeholder='نام خانوادگی' type='text' />
+                <Input placeholder='ایمیل' type='email' />
+                <Input placeholder='رمز عبور' type='password' />
+              </>
+            ) : (
+              <>
+                <Input placeholder='رمز عبور' type='password' />
+                <Input placeholder='نام کاربری' type='text' />
+              </>
+            )}
+            <div className="auth__submits">
+              <Button title={mode ? 'ثبت نام' : 'ورود'} />
+              <span className="auth__notaccount" onClick={changeMode}>{mode ? 'قبلا ثبت نام کرده ام' : 'در سامانه ثبت نام نکرده اید؟'}</span>
             </div>
           </div>
         </div>
         {/* Left Side  */}
-        <div className="login__left">
-          <div className="login__twetter">
+        <div className="auth__left">
+          <div className="auth__twetter">
             <img src={TwetterLogo} alt='tweeter' />
           </div>
-          <div className="login__brands">
-            <h1 className="login__brands-brand">CLONER</h1>
-            <h5 className="login__brands-slogan">ایده ها را در سراسر جهان کشف کنید</h5>
+          <div className="auth__brands">
+            <h1 className="auth__brands-brand">CLONER</h1>
+            <h5 className="auth__brands-slogan">ایده ها را در سراسر جهان کشف کنید</h5>
           </div>
         </div>
-       </div>
+      </div>
     </>
   )
 }

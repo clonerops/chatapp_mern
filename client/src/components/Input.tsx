@@ -1,11 +1,7 @@
-import { InputHTMLAttributes } from "react"
+import { FC } from 'react'
+import { InputProps } from "../models/inputModel"
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
-    placeholder: String,
-    type: String
-}
-
-const Input = ({placeholder, type}: InputProps) => {
+const Input: FC<InputProps> = ({ placeholder, type }): JSX.Element => {
   return (
     <input placeholder={placeholder} type={type} className="input" />
   )

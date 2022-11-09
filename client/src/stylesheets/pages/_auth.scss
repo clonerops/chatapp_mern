@@ -1,4 +1,4 @@
-.login {
+.auth {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -38,22 +38,6 @@
         align-items: center;
         margin-top: 2rem;
     }
-    &__submit {
-        padding: .5rem 2rem;
-        font-family: $font_light_sans;
-        outline: 0;
-        border: 1px solid $orange_dark;
-        border-radius: 0.5rem;
-        color: $white;
-        cursor: pointer;
-        transition: all .5s ease-in;
-        background: linear-gradient($orange_dark, $orange_light);
-        &:hover {
-            background: $white;
-            border: 1px solid $orange_dark;
-            color: $black;
-        }
-    }
     &__notaccount {
         color: $blue_dark;
         text-decoration: underline;
@@ -67,7 +51,7 @@
         align-items: center;
         margin: 0 8rem;
         @media only screen and (max-width: 576px) {
-            .login__twetter {
+            .auth__twetter {
                 visibility: hidden;
                 display: none;
             }
@@ -91,26 +75,26 @@
         }
 
         @media only screen and (max-width: 992px) {
-            .login__brands-brand {
+            .auth__brands-brand {
                 font-size: 2.5rem;
             }
-            .login__brands-slogan {
+            .auth__brands-slogan {
                 font-size: 1.5rem;
             }
         }
         @media only screen and (max-width: 768px) {
-            .login__brands-brand {
+            .auth__brands-brand {
                 font-size: 2rem;
             }
-            .login__brands-slogan {
+            .auth__brands-slogan {
                 font-size: 1.2rem;
             }
         }
         @media only screen and (max-width: 576px) {
-            .login__brands-brand {
+            .auth__brands-brand {
                 font-size: 1.5rem;
             }
-            .login__brands-slogan {
+            .auth__brands-slogan {
                 font-size: 0.7rem;
             }
         }

@@ -2,10 +2,10 @@
 
 @import './base/base';
 
-@import 'components/input';
+@import 'components/input', 'components/button';
 
 @import './layouts/container';
 
-@import './pages/login';
+@import './pages/auth';
 
 @import './themes/fonts';
