@@ -75,6 +75,59 @@ body {
   background: linear-gradient(#ff7333, #ff9c25);
 }
 
+.users {
+  display: flex;
+  flex-direction: row;
+  margin: 4rem 0;
+  border-bottom: 1px solid #ebedec;
+  cursor: pointer;
+}
+.users--box {
+  display: flex;
+  align-items: center;
+}
+.users--title {
+  padding: 4rem;
+}
+.users__avatar {
+  position: relative;
+}
+.users__avatar--img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 9999rem;
+  border: 1px solid #2aff58;
+}
+.users__avatar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #2aff58;
+  border-radius: 999rem;
+  opacity: 0.8;
+}
+.users__username {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.users__username--name {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.users__username--status {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #029f24;
+}
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -227,6 +280,14 @@ body {
   border-radius: 2rem;
   box-shadow: 1px 2px 17px 0px rgba(222, 222, 222, 0.75);
   background-color: #ffffff;
+  overflow: auto;
+}
+.room__box-users--box {
+  display: flex;
+  align-items: center;
+}
+.room__box-users--title {
+  padding: 4rem;
 }
 .room__box-conversation {
   width: 80%;
