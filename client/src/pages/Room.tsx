@@ -23,7 +23,7 @@ const Room = (): JSX.Element => {
                 </div>
                 <div className="room__box-conversation">
                     <div className="room__box-conversation--header">
-                        <img src={profile} className='room__box-conversation--header---img' />
+                        <img src={profile} alt='messages' className='room__box-conversation--header---img' />
                         <span className="room__box-conversation--header---title ">ابوالفضل معصومی</span>
                     </div>
                     <div className="room__box-conversation--body">
@@ -40,9 +40,6 @@ const Room = (): JSX.Element => {
                         <Message />
                     </div>
                     <div className="room__box-conversation--footer">
-                        {/* <butpan>
-                        </butpan>ton className="room__box-conversation--footer---attach">
-                            <span>+</s */}
                         <form className="room__box-conversation--footer---inputs">
                             <span className="room__box-conversation--footer---span">+</span>
                             <InputEmoji
@@ -50,7 +47,6 @@ const Room = (): JSX.Element => {
                                 placeholder="پیام خود را وارد کنید..."
                             />
                             <button className="room__box-conversation--footer---button">ارسال</button>
-                            {/* <input placeholder="پیام خود را وارد کنید..." className="room__box-conversation--footer---input"/> */}
                         </form>
                     </div>
                 </div>
