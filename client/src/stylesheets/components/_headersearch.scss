@@ -1,0 +1,35 @@
+.search {
+    display: flex;
+    align-items: center;
+    &__logo {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &-input {
+            padding: 1rem 2rem;
+            background-color: $white;
+            outline: 0;
+            border: 0;
+            border-radius: .4rem;
+        }
+
+        &-button {
+            position: absolute;
+            left: .4rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 0;
+            outline: 0;
+            border-radius: .4rem;
+            cursor: pointer;
+            color: $white;
+            background: linear-gradient($orange_dark, $orange_light);
+        }
+    }
+
+}
