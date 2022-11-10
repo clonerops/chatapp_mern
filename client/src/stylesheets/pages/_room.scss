@@ -7,6 +7,7 @@
         display: flex;
         flex-direction: row;
         height: 80vh;
+
         &-users {
             width: 20%;
             margin: 1rem;
@@ -14,21 +15,103 @@
             box-shadow: 1px 2px 17px 0px rgba(222, 222, 222, 0.75);
             background-color: $white;
             overflow: auto;
-            &--box{
+
+            &--box {
                 display: flex;
                 align-items: center;
             }
+
             &--title {
                 padding: 4rem;
             }
         }
 
         &-conversation {
+            position: relative;
             width: 80%;
+            // height: 100%;
             margin: 1rem;
             border-radius: 2rem;
             box-shadow: 1px 2px 17px 0px rgba(222, 222, 222, 0.75);
             background-color: $white;
+            padding: 0 4rem;
+
+            &--header {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0 4rem;
+                border-bottom: 1px solid $gray_dark;
+
+                &---img {
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 9999rem;
+                    border: 1px solid $green_dark;
+                }
+
+                &---title {
+                    padding: 0 1rem;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+            }
+
+            &--body {
+                height: 80%;
+                overflow: auto;
+            }
+
+            &--footer {
+                height: 10%;
+                border-top: 1px solid $gray_light;
+
+                
+                &---inputs {
+                    display: flex;
+                    height: 70%;
+                    margin-top: 1rem;
+                }
+                
+                &---span {
+                    padding: 1rem 2rem;
+                    background-color: $gray_light;
+                    border-radius: .5rem;
+                    margin: 0 1rem;
+                }
+                &---input {
+                    width: 100%;
+                    margin: 0 1rem;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 1;
+                    outline: 0;
+                    border-radius: 1rem;
+                    border: 0;
+                    padding: 0 4rem;
+                    -webkit-box-sizing: border-box;
+                    /* Safari/Chrome, other WebKit */
+                    -moz-box-sizing: border-box;
+                    /* Firefox, other Gecko */
+                    box-sizing: border-box;
+                    /* Opera/IE 8+ */
+                    background-color: $gray_light;
+                }
+
+                &---button {
+                    padding: 1rem 2rem;
+                    outline: 0;
+                    border-radius: .5rem;
+                    border: 0;
+                    background: linear-gradient($orange_dark, $orange_light);
+                    color: $white;
+                    cursor: pointer;
+                }
+
+            }
+
         }
     }
 }

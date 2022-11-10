@@ -3,7 +3,7 @@ import TwetterLogo from '../assets/images/twetter.png'
 import Button from '../components/Button'
 import Input from '../components/Input'
 
-const Signup = () => {
+const Signup = ():JSX.Element => {
 
   const [mode, setMode] = useState<boolean>(false)
 

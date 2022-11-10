@@ -1,6 +1,6 @@
 import profile from '../assets/images/profile.png'
 
-const Users = () => {
+const Users = ():JSX.Element => {
     return (
         <div className="users">
             <div className="users__avatar">

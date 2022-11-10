@@ -1,6 +1,6 @@
 import TwetterLogo from '../assets/images/twetter.png'
 
-const HeaderSearch = () => {
+const HeaderSearch = ():JSX.Element => {
     return (
         <div className='search'>
             <img className='search__logo' src={TwetterLogo} alt='tweeter' />

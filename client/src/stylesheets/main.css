@@ -14,6 +14,15 @@ body {
   background-color: #ebedec;
 }
 
+input, div {
+  font-family: "IRANSans_light";
+}
+
+.react-input-emoji--input {
+  text-align: right !important;
+  font-family: "IRANSans_light";
+}
+
 .input {
   margin: 1rem 0;
   padding: 1rem 2rem;
@@ -126,6 +135,51 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   color: #029f24;
+}
+
+.message {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background: linear-gradient(#ff7333, #ff9c25);
+}
+.message__text {
+  padding: 0.5rem 4rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.message__time {
+  text-align: end;
+  padding: 0.5rem 4rem;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.messagereceiver {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem auto 0 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: linear-gradient(#2a90ff, #13ccf3);
+}
+.messagereceiver__text {
+  padding: 0.5rem 4rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.messagereceiver__time {
+  padding: 0.5rem 4rem;
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 .container {
@@ -290,11 +344,77 @@ body {
   padding: 4rem;
 }
 .room__box-conversation {
+  position: relative;
   width: 80%;
   margin: 1rem;
   border-radius: 2rem;
   box-shadow: 1px 2px 17px 0px rgba(222, 222, 222, 0.75);
   background-color: #ffffff;
+  padding: 0 4rem;
+}
+.room__box-conversation--header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 4rem;
+  border-bottom: 1px solid #979c9d;
+}
+.room__box-conversation--header---img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999rem;
+  border: 1px solid #029f24;
+}
+.room__box-conversation--header---title {
+  padding: 0 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.room__box-conversation--body {
+  height: 80%;
+  overflow: auto;
+}
+.room__box-conversation--footer {
+  height: 10%;
+  border-top: 1px solid #ebedec;
+}
+.room__box-conversation--footer---inputs {
+  display: flex;
+  height: 70%;
+  margin-top: 1rem;
+}
+.room__box-conversation--footer---span {
+  padding: 1rem 2rem;
+  background-color: #ebedec;
+  border-radius: 0.5rem;
+  margin: 0 1rem;
+}
+.room__box-conversation--footer---input {
+  width: 100%;
+  margin: 0 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+  outline: 0;
+  border-radius: 1rem;
+  border: 0;
+  padding: 0 4rem;
+  /* Safari/Chrome, other WebKit */
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  background-color: #ebedec;
+}
+.room__box-conversation--footer---button {
+  padding: 1rem 2rem;
+  outline: 0;
+  border-radius: 0.5rem;
+  border: 0;
+  background: linear-gradient(#ff7333, #ff9c25);
+  color: #ffffff;
+  cursor: pointer;
 }
 
 @font-face {

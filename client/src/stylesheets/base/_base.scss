@@ -13,3 +13,12 @@ body {
     font-family: $font_light_sans;
     background-color: $gray_light;
 }
+
+input, div {
+    font-family: $font_light_sans;
+}
+
+.react-input-emoji--input{
+    text-align: right !important;
+    font-family: $font_light_sans;
+    }
