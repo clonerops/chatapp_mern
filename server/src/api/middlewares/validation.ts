@@ -1,9 +1,9 @@
-import { validationResult } from "express-validator";
+import { ValidationChain, validationResult } from "express-validator";
 
 // Validates received requests and checks for required fields and their format.
-export const validate = validations => {
-    return async (req, res, next) => {
-        await Promise.all(validations.map(validation => validation.run(req)));
+export const validate = (validations: ValidationChain[] | { run: (arg0: any) => any; }[]) => {
+    return async (req: any, res: any, next: any) => {
+        await Promise.all(validations.map((validation: { run: (arg0: any) => any; }) => validation.run(req)));
 
         const errors = validationResult(req);
         if (errors.isEmpty())
@@ -18,8 +18,10 @@ export const validate = validations => {
 };
 
 
-const formatError = (errors) => errors.array().map(error => {
+const formatError = (errors: any) => errors.array().map((error: { msg: string; param: any; }) => {
     if (error.msg === 'Invalid value') {
         return error.param
+    } else {
+        return error.msg
     }
 }).join(',')
