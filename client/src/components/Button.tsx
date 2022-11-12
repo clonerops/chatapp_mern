@@ -2,9 +2,9 @@ import { FC } from 'react'
 import { ButtonModel } from "../models/buttonModel"
 
 
-const Button: FC<ButtonModel> = ({ title }): JSX.Element => {
+const Button: FC<ButtonModel> = ({onClick, title }): JSX.Element => {
     return (
-        <button className="button">{title}</button>
+        <button onClick={onClick} className="button">{title}</button>
     )
 }
 

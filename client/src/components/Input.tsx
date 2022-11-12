@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { InputProps } from "../models/inputModel"
 
-const Input: FC<InputProps> = ({ placeholder, type }): JSX.Element => {
+const Input: FC<InputProps> = ({value, onChange, name, placeholder, type }): JSX.Element => {
   return (
-    <input placeholder={placeholder} type={type} className="input" />
+    <input value={value} onChange={onChange} name={name} placeholder={placeholder} type={type} className="input" />
   )
 }
 
